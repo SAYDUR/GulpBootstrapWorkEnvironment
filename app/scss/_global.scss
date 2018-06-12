@@ -1,0 +1,136 @@
+﻿body {
+    font-family: 'D-DIN', 'Open Sans', sans-serif;
+}
+
+//Buttons
+.btn {
+    font-size: 0.8rem;
+    padding: 10px 30px;
+    border-radius: 0;
+    font-weight: 400;
+    color: $primary;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    display: inline-block;
+    font-family: lato, sans-serif;
+    /*&:hover {
+        background-color: #2c3c5f;
+    }*/
+    &:active,
+    &:focus {
+        box-shadow: none;
+        outline: 0;
+        color: $primary;
+    }
+}
+
+.buttons {
+    color: $light;
+    background-color: $buttons;
+    border: 2px solid $buttons;
+    border-radius: 4px;
+
+    &:hover {
+        border-color: $buttons;
+        color: $text;
+        background-color: $light;
+    }
+}
+
+.buttons2 {
+    color: $light;
+    background-color: $primary;
+    border: 2px solid $primary;
+    border-radius: 4px;
+
+    &:hover {
+        border-color: $primary;
+        color: $text;
+        background-color: $light;
+    }
+}
+
+// Overlay on images with text
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+
+
+// a tags Links
+a {
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        outline: 0;
+    }
+
+    &:not([href]):not([tabindex]) {
+        color: $text;
+
+        &:focus,
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+//Headings
+h1, h2, h3, h4, h5, h6 {font-weight: normal; color: $primary; font-family: 'D-DIN-BOLD';}
+h1{font-size: 3.75rem;}
+h2{font-size: 2.8rem;}
+h3{font-size: 1.5rem;}
+
+// Parograph 
+p{font-size: 0.8rem;}
+
+//Sections spacing
+
+section {
+    padding: 80px 0 0;
+}
+
+.section {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+
+// Section Headings
+
+.SectionHeader {
+    margin: 0 auto;
+    text-align: center;
+
+    .SectionTitle {
+        margin-top: 0;
+        text-transform: uppercase;
+        position: relative;
+
+        span {
+            color: $primary;
+        }
+    }
+
+    .SectionSubtitle {
+        margin-top: 15px;
+        color: $text;
+        font-size: 0.8rem;
+    }
+
+    .lines {
+        margin: auto;
+        width: 70px;
+        position: relative;
+        border-top: 4px solid $primary;
+        margin-top: 15px;
+
+    }
+}

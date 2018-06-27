@@ -1,13 +1,115 @@
-﻿//Container
+﻿*, ::before, ::after {
+    transition: all 255ms ease-in-out;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'D-DIN', 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: $primary;
+    font-family: 'D-DIN-BOLD';
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    span{
+       font-family: 'D-DIN';
+       text-transform: initial;
+    }
+}
+
+h1, .h1 {
+    font-size: 2.5em;
+}
+
+h2, .h2 {
+    font-size: 2em;
+}
+
+h3, .h3 {
+    font-size: 1.75em;
+}
+
+h4, .h4 {
+    font-size: 1.5em;
+}
+
+h5, .h5 {
+    font-size: 1.25em;
+}
+
+h6, .h6 {
+    font-size: 1em;
+}
+
+// Parograph
+p {
+    line-height: 1.75;
+    margin-bottom: 1em;
+}
+
+//Container
 .container {
-    width: 1170px;
-    padding-right: 15px;
-    padding-left: 15px;
+    width: 100%;
+    padding-right: 1em;
+    padding-left: 1em;
     margin-right: auto;
     margin-left: auto;
 
-    @media #{$tablet} {
-        width: 100%;
+    @media (min-width: 576px) {
+        max-width: 540px;
     }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Sections
+section {
+    padding: 3em 0;
+}
+
+// Buttons & Links
+
+.Button {
+    display: inline-block;
+    padding: 0.5em 1.8em;
+    text-align: center;
+    border: 2px solid $gray-500;
+
+    &:hover{color: $text;}
+}
+
+a{
+    text-decoration: none;
+    color: $text;
+    
+    &:hover{
+        color: blue;
+    }
+}
+
+// SVG
+svg{
+    width: 100%;
 }

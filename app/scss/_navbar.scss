@@ -45,7 +45,7 @@ header {
     .hamBurgerWrap {
         width: 70px;
         font-size: 12px;
-        padding: 12px 10px;
+        padding: 10px 10px;
         text-transform: uppercase;
         color: $light;
         border: 0;
@@ -57,7 +57,9 @@ header {
         display: none;
 
         @media #{$tablet} {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 

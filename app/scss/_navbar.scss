@@ -1,0 +1,180 @@
+//Navigation
+header {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    background-color: $gray-800;
+    transition: all 0.3s ease-in-out;
+
+    & > .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.3s ease-in-out;
+    }
+
+    a.logo {
+        text-decoration: none;
+        color: $light;
+        display: inline-block;
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        line-height: inherit;
+        white-space: nowrap;
+    }
+
+    .hamBurgerWrap {
+        width: 55px;
+        font-size: 12px;
+        padding: 12px 10px;
+        text-transform: uppercase;
+        color: $light;
+        border: 0;
+        background-color: #0e2e47;
+        border-radius: 6px;
+        overflow: hidden;
+        user-select: none;
+        display: none;
+
+        @media #{$tablet} {
+            display: block;
+        }
+    }
+
+    #nav-icon {
+        width: 14px;
+        height: 13px;
+        position: relative;
+        float: right;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+
+        span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: $light;
+            border: none;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: 0.25s ease-in-out;
+
+            &:nth-child(1) {
+                top: 0px;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                top: 5px;
+            }
+
+            &:nth-child(4) {
+                top: 10px;
+            }
+        }
+
+        &.open span {
+            background-color: red;
+
+            &:nth-child(1) {
+                top: 5px;
+                width: 0%;
+                left: 50%;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(4) {
+                top: 5px;
+                width: 0%;
+                left: 50%;
+            }
+        }
+    }
+
+    // This is the nav container
+    nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            flex-direction: row;
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    font-size: 90%;
+                    font-weight: 400;
+                    padding: 0.75em 0;
+                    letter-spacing: 1px;
+                    padding: 1.1em 1em;
+                    color: $light;
+
+                    &.active,
+                    &:hover {
+                        color: $gray-300;
+                    }
+                }
+            }
+        }
+
+        @media #{$tablet} {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            transform-origin: top;
+            transform: scale(1, 0);
+            transition: transform 400ms ease-in-out;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                li {
+                    background-color: $secondary;
+
+                    a {
+                        display: block;
+                        padding: 15px;
+                        border-bottom: 0.5px solid $gray-300;
+                        opacity: 0;
+                        transition: opacity 150ms ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    .navToggle {
+        display: none;
+    }
+
+    .navToggle:checked ~ nav {
+        transform: scale(1, 1);
+
+        a {
+            opacity: 1;
+            transition: opacity 250ms ease-in-out 250ms;
+        }
+    }
+}

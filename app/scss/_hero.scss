@@ -1,0 +1,27 @@
+.hero {
+    background-color: $gray-400;
+
+    & > .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+
+        .sectionContent {
+
+            .sectionText {
+                background-color: bisque;
+
+                .button{
+                    border-color: $gray-400;
+
+                    &:hover{background-color: $gray-400; }
+                }
+            }
+
+            .sectionIMG {
+                background-color: azure;
+            }
+        }
+    }
+}

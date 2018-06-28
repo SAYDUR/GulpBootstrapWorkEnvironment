@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, h6 {
     color: $primary;
     font-family: 'D-DIN-BOLD';
     text-transform: uppercase;
+    margin: 0;
     margin-bottom: 0.5em;
     span{
        font-family: 'D-DIN';
@@ -91,11 +92,12 @@ section {
 
 // Buttons & Links
 
-.Button {
+.button {
     display: inline-block;
     padding: 0.5em 1.8em;
     text-align: center;
     border: 2px solid $gray-500;
+    border-radius: 6px;
 
     &:hover{color: $text;}
 }
@@ -112,4 +114,16 @@ a{
 // SVG
 svg{
     width: 100%;
+}
+
+// FlexBox
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .flexItem{
+        width: 49%;
+        padding: .8em;
+    }
 }
